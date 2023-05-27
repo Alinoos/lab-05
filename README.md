@@ -6,9 +6,11 @@
 # Task 1
 Создайте `CMakeList.txt` для библиотеки banking
 
-We believe that we have already downloaded banking
+Мы уже скопировали `banking` из репозитория ЛР
 
-Connect the gtest library:
+!!!Необходимо исправить 34 строчку, так как в ней допущена ошибка: Меняем `Debit(to, sum + fee_)` на `Debit(from, sum + fee_)`
+
+Подключаем gtest library:
 ```
 $ mkdir third-party
 $ git submodule add https://github.com/google/googletest third-party/gtest
@@ -21,7 +23,7 @@ $ git push origin master
 ```
 
 
-Creat the CMakeLists.txt for banking:
+Создаем CMakeLists.txt для banking:
 ```
 $ cd banking
 $ cat >> CMakeLists.txt << EOF
@@ -53,7 +55,7 @@ $ git commit -m "CMake - 1 - 1"
 $ git push origin master
 ```
 
-Creat other CMakeLists.txt for `tests`:
+Создаем другой CMakeLists.txt для `tests`:
 ```
 $ cat >> CMakeLists.txt << EOF
 >EOF
@@ -94,7 +96,7 @@ $ git push origin master
 - Используйте mock-объекты
 - Покрытие кода должно составлять 100%
 
-Make the `tests.cpp`:
+Делаем тесты `tests.cpp`:
 ```
 $ cat >> tests.cpp << EOF
 >EOF
@@ -184,7 +186,7 @@ $ git push origin master
 # Task 3 
 Настройте сборочную процедуру на TravisCI
 
-Make `.yml` file:
+Создаем `.yml` файл (Сценарий):
 ```
 $ mkdir .github
 $ cd ~/lab-05/.github
@@ -240,7 +242,8 @@ $ git push origin master
 # Task 4
 Настройте Coveralls.io
 
-Changed CMakeLists.txt , which is responsible for the operation of the tests:
+Редактируем содержимое `CMakeLists.txt` для тестов:
+
 ```
 $ nano CMakeLists.txt 
 ```
@@ -286,11 +289,12 @@ $ git commit -m "CMake - 2"
 $ git push origin master
 ```
 
-Let's change the scenario:
+Теперь изменим сценарий:
 ```
 $ cd ~/lab-05/.github/workflows
 $ nano Action.yml
 ```
+
 Новое содержимое файла Action.ymk:
 ```
 name: CMake
@@ -340,8 +344,7 @@ $ git commit -m "Action - 2"
 $ git push origin master
 ```
 
-Registering on the website https://coveralls.io
-
+Регистрируемся на Coveralls.io
 ```
 $ nano README.md 
 ```
