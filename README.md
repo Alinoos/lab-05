@@ -1,4 +1,5 @@
 [![Coverage Status](https://coveralls.io/repos/github/Alinoos/lab-05/badge.svg?branch=master)](https://coveralls.io/github/Alinoos/lab-05?branch=master)
+- `Необходимо кликнуть (неотображает покрытие)`
 
 # Report-05
 Данная лабораторная работа посвещена изучению фреймворков для тестирования на примере GTest
